@@ -13,7 +13,7 @@ class PostController extends Controller
     {
         // validate post
         $post = new Post;
-        $post->user = Auth::user();
+        $post->user = Auth::id();
         $post->content = $request->postContent;
         $post->save();
     }
