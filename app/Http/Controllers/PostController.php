@@ -24,7 +24,7 @@ class PostController extends Controller
             ->orderBy('created_at', 'desc')
             ->take(20)
             ->get();
-        
+
         return view('home', ['allPosts' => $allPosts]);
     }
 }
