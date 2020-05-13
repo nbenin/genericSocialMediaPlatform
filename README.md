@@ -6,8 +6,8 @@ First time using Laravel, mostly experimenting
 ### Goals
 
 - Profile page
-- Post to own page
-- Have all posts go to a main feed
+- ~~Post to own page~~
+- ~~Have all posts go to a main feed~~
 - Add specific people as a friend
 - Filter main feed with only "friends"
 

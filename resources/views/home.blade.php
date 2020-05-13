@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row my-3 text-center justify-content-center">
-        <form method="post" action="{{URL::to('/home')}}" class="col-md-6">
+        <form method="post" action="{{ URL::to('/home') }}" class="col-md-6">
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="postContent">Say Something?</label>
@@ -19,19 +19,14 @@
         </div>
 
         <div class="col-md-6 text-center">
-            <div class="card">
-                <div class="card-header">Feed</div>
+            <h3>Feed</h3>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
+            @foreach ($allPosts as $post)
+                <div class="card">
+                    <div class="card-header">{{ $post->user_id }}</div>
+                    <div class="card-body">{{ $post->content }}</div>
                 </div>
-            </div>
+            @endforeach
         </div>
 
         <div class="col-md-3">
