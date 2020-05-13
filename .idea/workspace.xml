@@ -19,7 +19,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="gsmp.local" id="76749221-0f89-45b9-9045-686fdf57f844" name="gsmp.local" />
@@ -170,7 +169,7 @@
       <workItem from="1589204977421" duration="3355000" />
       <workItem from="1589269518506" duration="604000" />
       <workItem from="1589290588102" duration="1995000" />
-      <workItem from="1589352820691" duration="10580000" />
+      <workItem from="1589352820691" duration="11324000" />
     </task>
     <servers />
   </component>
