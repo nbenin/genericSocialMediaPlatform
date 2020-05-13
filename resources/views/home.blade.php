@@ -3,10 +3,11 @@
 @section('content')
 <div class="container">
     <div class="row my-3 text-center justify-content-center">
-        <form class="col-md-6">
+        <form method="post" action="{{URL::to('/home')}}" class="col-md-6">
+            {{ csrf_field() }}
             <div class="form-group">
                 <label for="postContent">Say Something?</label>
-                <textarea class="form-control" id="postContent" rows="2" placeholder="What's on your mind??"></textarea>
+                <textarea class="form-control" name="postContent" id="postContent" rows="2" placeholder="What's on your mind??"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Say It!</button>
         </form>
