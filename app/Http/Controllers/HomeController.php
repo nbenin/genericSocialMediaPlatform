@@ -28,11 +28,26 @@ class HomeController extends Controller
     {
         // DB query for all the posts in order or newest post on top of list
         $allPosts = DB::table('posts')
-            ->select('user_id', 'content')
+            ->select('user_id', 'content', 'id')
             ->orderBy('created_at', 'desc')
             ->take(20)
             ->get();
 
         return view('home', ['allPosts' => $allPosts]);
+    }
+
+    public function handleSubmits(Request $request)
+    {
+        if ($request->has('postForm')) {
+            $postController = new PostController();
+            $postController->store($request);
+
+        }
+        if ($request->has('commentForm')) {
+            $commentController = new CommentController();
+            $commentController->store($request);
+
+        }
+        return $this->index();
     }
 }
