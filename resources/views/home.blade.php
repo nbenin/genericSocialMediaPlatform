@@ -23,14 +23,21 @@
             @foreach ($allPosts as $post)
                 <div class="card">
                     <!-- Main content of each post -->
-                    <div class="card-header">{{ $post->user_id }}</div>
-                    <div class="card-body">{{ $post->content }}</div>
+                    @foreach($allUsers as $user)
+                        @if($user->id === $post->user_id)
+                            <div class="card-header">{{ $user->name }}</div>
+                        @endif
+                    @endforeach
+
+
+
+                    <div class="card-body"><strong>{{ $post->content }}</strong></div>
 
                     <div id="postNumber{{ $post->id }}" class="collapse hide" aria-labelledby="headingOne">
                         <!-- append comments to each post -->
                         @foreach ($allComments as $comment)
                             @if($post->id === $comment->post_id)
-                                <p>{{ $comment->content }}</p>
+                                <code>{{ $comment->content }}</code>
                             @endif
 
                         @endforeach

@@ -21,10 +21,6 @@ class Post extends Model
     // Trying to make relations
     public function user()
     {
-        $this->belongsTo('App/User');
-    }
-    public function comment()
-    {
-        $this->hasMany('App/Comment');
+        $this->belongsTo('App/User', 'user_id');
     }
 }

@@ -19,10 +19,6 @@ class AddExtraToPostsTable extends Migration
             $table->string('content');
             $table->integer('comments');
             $table->unsignedBigInteger('user_id');
-        });
-
-        Schema::table('posts', function(Blueprint $table) {
-            //
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }

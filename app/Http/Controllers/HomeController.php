@@ -27,7 +27,7 @@ class HomeController extends Controller
     public function index()
     {
         // DB query for all the posts in order or newest post on top of list
-        $allPosts = DB::table('posts')
+        $allPosts = Posts::with('user')
             ->orderBy('created_at', 'desc')
             ->take(20)
             ->get();
@@ -36,7 +36,12 @@ class HomeController extends Controller
             ->orderBy('created_at', 'desc')
             ->get();
 
-        return view('home', ['allPosts' => $allPosts, 'allComments' => $allComments]);
+        $allUsers = User::all();
+        foreach ($allPosts as $post) {
+            echo $post->user->name;
+        }
+
+        return view('home', ['allPosts' => $allPosts, 'allComments' => $allComments, 'allUsers' => $allUsers]);
     }
 
     public function handleSubmits(Request $request)
