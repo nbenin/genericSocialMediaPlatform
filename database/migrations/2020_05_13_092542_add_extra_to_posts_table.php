@@ -17,6 +17,7 @@ class AddExtraToPostsTable extends Migration
             //
             $table->boolean('edited');
             $table->string('content');
+            $table->integer('comments');
             $table->unsignedBigInteger('user_id');
         });
 
@@ -36,6 +37,7 @@ class AddExtraToPostsTable extends Migration
         Schema::table('posts', function (Blueprint $table) {
             //
             $table->dropForeign('posts_user_id_foreign');
+            $table->dropColumn('comments');
             $table->dropColumn('edited');
             $table->dropColumn('content');
 

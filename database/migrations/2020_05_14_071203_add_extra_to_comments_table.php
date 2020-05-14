@@ -37,8 +37,8 @@ class AddExtraToCommentsTable extends Migration
         Schema::table('comments', function (Blueprint $table) {
             //
             $table->dropColumn('content');
-            $table->dropForeign('user_id');
-            $table->dropForeign('post_id');
+            $table->dropForeign('comments_user_id_foreign');
+            $table->dropForeign('comments_post_id_foreign');
         });
     }
 }

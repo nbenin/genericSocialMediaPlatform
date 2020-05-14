@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="3704cab3-93b9-45fe-932a-5e53e7d72962" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_13_092542_add_extra_to_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_13_092542_add_extra_to_posts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_14_071203_add_extra_to_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_14_071203_add_extra_to_comments_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +190,7 @@
       <workItem from="1589269518506" duration="604000" />
       <workItem from="1589290588102" duration="1995000" />
       <workItem from="1589352820691" duration="17542000" />
-      <workItem from="1589440105698" duration="6620000" />
+      <workItem from="1589440105698" duration="8974000" />
     </task>
     <servers />
   </component>
