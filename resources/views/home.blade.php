@@ -23,14 +23,7 @@
             @foreach ($allPosts as $post)
                 <div class="card">
                     <!-- Main content of each post -->
-                    @foreach($allUsers as $user)
-                        @if($user->id === $post->user_id)
-                            <div class="card-header">{{ $user->name }}</div>
-                        @endif
-                    @endforeach
-
-
-
+                    <div class="card-header">{{ $post->user->name }}</div>
                     <div class="card-body"><strong>{{ $post->content }}</strong></div>
 
                     <div id="postNumber{{ $post->id }}" class="collapse hide" aria-labelledby="headingOne">

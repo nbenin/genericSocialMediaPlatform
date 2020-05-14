@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Comment;
 use App\Post;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
@@ -27,21 +28,16 @@ class HomeController extends Controller
     public function index()
     {
         // DB query for all the posts in order or newest post on top of list
-        $allPosts = Posts::with('user')
+        $allPosts = Post::with('user')
             ->orderBy('created_at', 'desc')
             ->take(20)
             ->get();
 
-        $allComments = DB::table('comments')
+        $allComments = Comment::with('user', 'post')
             ->orderBy('created_at', 'desc')
             ->get();
 
-        $allUsers = User::all();
-        foreach ($allPosts as $post) {
-            echo $post->user->name;
-        }
-
-        return view('home', ['allPosts' => $allPosts, 'allComments' => $allComments, 'allUsers' => $allUsers]);
+        return view('home', ['allPosts' => $allPosts, 'allComments' => $allComments]);
     }
 
     public function handleSubmits(Request $request)

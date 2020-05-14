@@ -6,9 +6,6 @@
       <change beforePath="$PROJECT_DIR$/app/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_13_092542_add_extra_to_posts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_13_092542_add_extra_to_posts_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_05_14_071203_add_extra_to_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_05_14_071203_add_extra_to_comments_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -192,7 +189,7 @@
       <workItem from="1589290588102" duration="1995000" />
       <workItem from="1589352820691" duration="17542000" />
       <workItem from="1589440105698" duration="11473000" />
-      <workItem from="1589461007117" duration="1441000" />
+      <workItem from="1589461007117" duration="2211000" />
     </task>
     <servers />
   </component>

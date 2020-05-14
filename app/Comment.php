@@ -11,10 +11,10 @@ class Comment extends Model
     // Trying to make relations
     public function user()
     {
-        $this->belongsTo('App/User', 'user_id');
+        return $this->belongsTo('App\User', 'user_id');
     }
     public function post()
     {
-        $this->belongsTo('App/Post', 'post_id');
+        return $this->belongsTo('App\Post', 'post_id');
     }
 }
