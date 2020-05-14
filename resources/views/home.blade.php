@@ -32,6 +32,13 @@
                     </button>
 
                     <div id="postNumber{{ $post->id }}" class="collapse hide" aria-labelledby="headingOne">
+                        <!-- append comments to each post -->
+                        @foreach ($allComments as $comment)
+                            @if($post->id === $comment->post_id)
+                                <p>{{ $comment->content }}</p>
+                            @endif
+
+                        @endforeach
                         <form method="post" action="{{ URL::to('/home') }}" class="">
                             {{ csrf_field() }}
                             <div class="form-group">

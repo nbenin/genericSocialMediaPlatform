@@ -33,7 +33,11 @@ class HomeController extends Controller
             ->take(20)
             ->get();
 
-        return view('home', ['allPosts' => $allPosts]);
+        $allComments = DB::table('comments')
+            ->orderBy('created_at', 'desc')
+            ->get();
+
+        return view('home', ['allPosts' => $allPosts, 'allComments' => $allComments]);
     }
 
     public function handleSubmits(Request $request)
