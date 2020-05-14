@@ -8,8 +8,11 @@ First time using Laravel, mostly experimenting
 - ~~Profile page~~
 - ~~Post to own page~~
 - ~~Have all posts go to a main feed~~
+- allow comments
 - Add specific people as a friend
 - Filter main feed with only "friends"
+- add upvote/likes
+- allow editing of post or profile
 
 
 

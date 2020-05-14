@@ -4,7 +4,7 @@
 
     <div class="container">
         <div class="text-center">
-            <h1>{{ $user->id }}</h1>
+            <h1>{{ $user->name }}'s Profile</h1>
             <p>{{ $user->email }}</p>
         </div>
     </div>
