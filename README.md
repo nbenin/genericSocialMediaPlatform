@@ -11,8 +11,8 @@ First time using Laravel, mostly experimenting
 - ~~allow comments~~
 - ~~fix relations and refactor~~
 - ~~click on other users to see their profiles~~
-- Add specific people as a friend
-- Filter main feed with only "friends"
+-  Add specific people as a friend
+-  Filter main feed with only "friends"
 - add upvote/likes
 - allow editing of post or profile
 
