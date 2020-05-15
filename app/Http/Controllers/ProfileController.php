@@ -35,12 +35,14 @@ class ProfileController extends Controller
         if ($request->has('postForm')) {
             $postController = new PostController();
             $postController->store($request);
-
         }
         if ($request->has('commentForm')) {
             $commentController = new CommentController();
             $commentController->store($request);
-
+        }
+        if ($request->has('addFriend')) {
+            $friendController = new FriendController();
+            $friendController->addFriend($id);
         }
         return $this->index($id);
     }

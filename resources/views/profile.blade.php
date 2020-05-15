@@ -23,6 +23,8 @@
     </div>
     @endif
 
+    <!-- hides profile if not friends -->
+    @if(Auth::user()->friend_id === $user->id)
     <div class="container">
 
         <div class="row justify-content-center">
@@ -51,7 +53,7 @@
                                 <div class="form-group">
                                     <textarea class="form-control" name="commentContent" id="commentContent" rows="1"></textarea>
                                 </div>
-                                <button type="submit" name="commentForm" value="{{$post->id}}" class="btn btn-primary">Say It!</button>
+                                <button type="submit" name="commentForm" value="{{ $post->id }}" class="btn btn-primary">Say It!</button>
                             </form>
                         </div>
 
@@ -68,4 +70,12 @@
             </div>
         </div>
     </div>
+    @else
+        <form method="post" action="{{ URL::to('/profile/' . $user->id) }}">
+            {{ csrf_field() }}
+            <button type="submit" name="addFriend" value="{{ $user->id }}">Add Friend!</button>
+        </form>
+    @endif
+
+
 @endsection
