@@ -28,14 +28,11 @@
 
                     <div id="postNumber{{ $post->id }}" class="collapse hide" aria-labelledby="headingOne">
                         <!-- append comments to each post -->
-                        @foreach ($allComments as $comment)
-                            @if($post->id === $comment->post_id)
+                        @foreach ($post->comments as $comment)
                                 <div class="text-left container">
                                     <h6>By {{ $comment->user->name }} @ {{ $comment->created_at }}</h6>
                                     <code>{{ $comment->content }}</code>
                                 </div>
-                            @endif
-
                         @endforeach
                         <form method="post" action="{{ URL::to('/home') }}" class="">
                             {{ csrf_field() }}
@@ -48,7 +45,7 @@
 
                     <!-- Add a comment to a certain post -->
                     <button class="btn btn-link" data-toggle="collapse" data-target="#postNumber{{ $post->id }}">
-                        {{ $post->comments }} Comments
+                        {{ $post->commentCount }} Comments
                     </button>
                 </div>
             @endforeach

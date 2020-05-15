@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -22,14 +23,25 @@ class ProfileController extends Controller
     public function index()
     {
         // query for user specific posts
-        $userPosts = DB::table('posts')
-            ->where('user_id', Auth::id())
-            ->orderBy('created_at', 'desc')
-            ->take(20)
-            ->get();
+        $user = User::with('posts')
+            ->where('id', Auth::id())
+            ->first();
 
-        $
+        return view('profile', ['user' => $user]);
+    }
 
-        return view('profile', ['user' => Auth::user(), 'userPosts' => $userPosts]);
+    public function handleSubmits(Request $request)
+    {
+        if ($request->has('postForm')) {
+            $postController = new PostController();
+            $postController->store($request);
+
+        }
+        if ($request->has('commentForm')) {
+            $commentController = new CommentController();
+            $commentController->store($request);
+
+        }
+        return $this->index();
     }
 }

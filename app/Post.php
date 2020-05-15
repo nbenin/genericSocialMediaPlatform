@@ -17,15 +17,14 @@ class Post extends Model
         'edited' => false,
     ];
 
-
     // Trying to make relations
     public function user()
     {
         return $this->belongsTo('App\User', 'user_id');
     }
 
-    public function comment()
+    public function comments()
     {
-        
+        return $this->hasMany('App\Comment', 'post_id');
     }
 }

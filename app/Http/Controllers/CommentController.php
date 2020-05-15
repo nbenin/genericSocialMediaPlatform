@@ -21,7 +21,7 @@ class CommentController extends Controller
 
         // Increase comment counter on the post
         $post = DB::table('posts')->where('id', $comment->post_id);
-        $post->increment('comments');
+        $post->increment('commentCount');
 
     }
 
