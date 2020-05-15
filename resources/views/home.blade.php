@@ -14,23 +14,26 @@
     </div>
 
     <div class="row justify-content-center">
-        <div class="col-md-3">
+        <div class="col-md-2">
 
         </div>
 
-        <div class="col-md-6 text-center">
-            <h3>Feed</h3>
+        <div class="col-md-8 text-center">
+            <h1>Feed</h1>
             @foreach ($allPosts as $post)
                 <div class="card">
                     <!-- Main content of each post -->
-                    <div class="card-header">{{ $post->user->name }}</div>
-                    <div class="card-body"><strong>{{ $post->content }}</strong></div>
+                    <div class="card-header"><h3>{{ $post->user->name }}</h3> @ {{ $post->created_at }}</div>
+                    <div class="card-body"><h4><strong>{{ $post->content }}</strong></h4></div>
 
                     <div id="postNumber{{ $post->id }}" class="collapse hide" aria-labelledby="headingOne">
                         <!-- append comments to each post -->
                         @foreach ($allComments as $comment)
                             @if($post->id === $comment->post_id)
-                                <code>{{ $comment->content }}</code>
+                                <div class="text-left container">
+                                    <h6>By {{ $comment->user->name }} @ {{ $comment->created_at }}</h6>
+                                    <code>{{ $comment->content }}</code>
+                                </div>
                             @endif
 
                         @endforeach
@@ -51,7 +54,7 @@
             @endforeach
         </div>
 
-        <div class="col-md-3">
+        <div class="col-md-2">
 
         </div>
     </div>

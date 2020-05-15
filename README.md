@@ -9,6 +9,7 @@ First time using Laravel, mostly experimenting
 - ~~Post to own page~~
 - ~~Have all posts go to a main feed~~
 - ~~allow comments~~
+- fix relations and refactor
 - Add specific people as a friend
 - Filter main feed with only "friends"
 - add upvote/likes

@@ -28,6 +28,8 @@ class ProfileController extends Controller
             ->take(20)
             ->get();
 
+        $
+
         return view('profile', ['user' => Auth::user(), 'userPosts' => $userPosts]);
     }
 }

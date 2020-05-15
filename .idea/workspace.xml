@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3704cab3-93b9-45fe-932a-5e53e7d72962" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Post.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -189,7 +186,8 @@
       <workItem from="1589290588102" duration="1995000" />
       <workItem from="1589352820691" duration="17542000" />
       <workItem from="1589440105698" duration="11473000" />
-      <workItem from="1589461007117" duration="2211000" />
+      <workItem from="1589461007117" duration="4051000" />
+      <workItem from="1589526136474" duration="948000" />
     </task>
     <servers />
   </component>
@@ -269,9 +267,9 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" key="SettingsEditor/67.27.1853.1053/1920.0.1280.1024@67.27.1853.1053" timestamp="1589199933607" />
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1589461019386">
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1589526164056">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053/1920.0.1280.1024@67.27.1853.1053" timestamp="1589461019386" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053/1920.0.1280.1024@67.27.1853.1053" timestamp="1589526164056" />
   </component>
 </project>
