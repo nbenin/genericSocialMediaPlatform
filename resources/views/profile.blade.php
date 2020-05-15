@@ -10,8 +10,9 @@
     </div>
 
     <!-- Submit posts on own page -->
+    @if (Auth::user()->id === $user->id)
     <div class="row my-3 text-center justify-content-center">
-        <form method="post" action="{{ URL::to('/profile') }}" class="col-md-6">
+        <form method="post" action="{{ URL::to('/profile/' . $user->id) }}" class="col-md-6">
             {{ csrf_field() }}
             <div class="form-group">
                 <label for="postContent">Say Something?</label>
@@ -20,7 +21,7 @@
             <button type="submit" name="postForm" class="btn btn-primary">Say It!</button>
         </form>
     </div>
-
+    @endif
 
     <div class="container">
 
@@ -32,20 +33,20 @@
             <div class="col-md-8 text-center">
                 <h3>My Posts</h3>
 
-                @foreach ($user->posts as $post)
+                @foreach ($user->posts->reverse() as $post)
                     <div class="card">
                         <div class="card-header">{{ $post->user->name }}</div>
                         <div class="card-body">{{ $post->content }}</div>
 
                         <div id="postNumber{{ $post->id }}" class="collapse hide" aria-labelledby="headingOne">
                             <!-- append comments to each post -->
-                            @foreach ($post->comments as $comment)
+                            @foreach ($post->comments->reverse() as $comment)
                                     <div class="text-left container">
                                         <h6>By {{ $comment->user->name }} @ {{ $comment->created_at }}</h6>
                                         <code>{{ $comment->content }}</code>
                                     </div>
                             @endforeach
-                            <form method="post" action="{{ URL::to('/profile') }}" class="">
+                            <form method="post" action="{{ URL::to('/profile/'. $user->id) }}" class="">
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <textarea class="form-control" name="commentContent" id="commentContent" rows="1"></textarea>

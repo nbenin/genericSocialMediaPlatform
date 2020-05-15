@@ -22,5 +22,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/home', 'HomeController@handleSubmits');
-Route::get('/profile', 'ProfileController@index')->name('profile');
-Route::post('/profile', 'ProfileController@handleSubmits');
+Route::get('/profile/{id}', 'ProfileController@index')->name('profile');
+Route::post('/profile/{id}', 'ProfileController@handleSubmits');

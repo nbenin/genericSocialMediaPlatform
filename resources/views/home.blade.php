@@ -23,12 +23,12 @@
             @foreach ($allPosts as $post)
                 <div class="card">
                     <!-- Main content of each post -->
-                    <div class="card-header"><h3>{{ $post->user->name }}</h3> @ {{ $post->created_at }}</div>
+                    <div class="card-header"><a href="{{ url('profile/'.$post->user->id) }}"><h3>{{ $post->user->name }}</h3></a> @ {{ $post->created_at }}</div>
                     <div class="card-body"><h4><strong>{{ $post->content }}</strong></h4></div>
 
                     <div id="postNumber{{ $post->id }}" class="collapse hide" aria-labelledby="headingOne">
                         <!-- append comments to each post -->
-                        @foreach ($post->comments as $comment)
+                        @foreach ($post->comments->reverse() as $comment)
                                 <div class="text-left container">
                                     <h6>By {{ $comment->user->name }} @ {{ $comment->created_at }}</h6>
                                     <code>{{ $comment->content }}</code>

@@ -20,17 +20,17 @@ class ProfileController extends Controller
     }
 
     // Display the profile
-    public function index()
+    public function index($id)
     {
         // query for user specific posts
         $user = User::with('posts')
-            ->where('id', Auth::id())
+            ->where('id', $id)
             ->first();
 
         return view('profile', ['user' => $user]);
     }
 
-    public function handleSubmits(Request $request)
+    public function handleSubmits(Request $request, $id)
     {
         if ($request->has('postForm')) {
             $postController = new PostController();
@@ -42,6 +42,6 @@ class ProfileController extends Controller
             $commentController->store($request);
 
         }
-        return $this->index();
+        return $this->index($id);
     }
 }
