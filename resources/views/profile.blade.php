@@ -23,8 +23,6 @@
     </div>
     @endif
 
-    <!-- hides profile if not friends -->
-    @if(Auth::user()->friend_id === $user->id)
     <div class="container">
 
         <div class="row justify-content-center">
@@ -70,12 +68,4 @@
             </div>
         </div>
     </div>
-    @else
-        <form method="post" action="{{ URL::to('/profile/' . $user->id) }}">
-            {{ csrf_field() }}
-            <button type="submit" name="addFriend" value="{{ $user->id }}">Add Friend!</button>
-        </form>
-    @endif
-
-
 @endsection

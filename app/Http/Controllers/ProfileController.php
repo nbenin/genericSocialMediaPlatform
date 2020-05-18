@@ -40,10 +40,6 @@ class ProfileController extends Controller
             $commentController = new CommentController();
             $commentController->store($request);
         }
-        if ($request->has('addFriend')) {
-            $friendController = new FriendController();
-            $friendController->addFriend($id);
-        }
         return $this->index($id);
     }
 }

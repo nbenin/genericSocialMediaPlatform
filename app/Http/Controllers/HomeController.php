@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Comment;
 use App\Post;
+use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -23,7 +23,7 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return Renderable
      */
     public function index()
     {

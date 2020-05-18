@@ -25,4 +25,5 @@ Route::post('/home', 'HomeController@handleSubmits');
 Route::get('/profile/{id}', 'ProfileController@index')->name('profile');
 Route::post('/profile/{id}', 'ProfileController@handleSubmits');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+Route::post('/dashboard/{id}', 'DashboardController@addFriend');
 
