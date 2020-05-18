@@ -15,6 +15,5 @@ class FriendController extends Controller
         $user = User::find(Auth::id());
         $user->friend_id = $id;
         $user->save();
-        echo $user;
     }
 }

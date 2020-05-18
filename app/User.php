@@ -42,8 +42,13 @@ class User extends Authenticatable
         return $this->hasMany('App\Post');
     }
 
-    public function friend()
+    public function friends()
     {
         return $this->hasMany('App\User');
+    }
+
+    public function friendOf()
+    {
+        return $this->belongsTo('App\User');
     }
 }
