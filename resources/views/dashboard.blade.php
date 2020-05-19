@@ -33,14 +33,14 @@
         </tr>
         </thead>
         <tbody>
-        @foreach ($notFriends as $friend)
+        @foreach ($notFriends as $notFriend)
             <tr>
-                <td>{{ $friend->name }}</td>
-                <td>{{ $friend->email }}</td>
+                <td>{{ $notFriend->name }}</td>
+                <td>{{ $notFriend->email }}</td>
                 <td>
                     <form method="post" action="{{ URL::to('/dashboard') }}">
                         {{ csrf_field() }}
-                        <button type="submit" name="addFriend" value="{{ $friend->id }}">Add Friend</button>
+                        <button type="submit" name="addFriend" value="{{ $notFriend->id }}">Add Friend</button>
                     </form>
                 </td>
             </tr>
