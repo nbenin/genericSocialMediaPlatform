@@ -27,20 +27,23 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $userFriends = User::with('friends')
-            ->where('id', Auth::id())
-            ->first();
-        
-        foreach ($userFriends->friends as $friend)
+
+        // Array used to filter home page with only posts from friends
+        $userSpecificFeed = array(Auth::id());
+
+        foreach (Auth::user()->friends as $friend)
         {
-            echo $friend->name;
+            array_push($userSpecificFeed, $friend->id);
         }
+
 
         // DB query for all the posts in order or newest post on top of list
         $allPosts = Post::with('user', 'comments')
+            ->whereIn('user_id', $userSpecificFeed)
             ->orderBy('created_at', 'desc')
             ->take(20)
             ->get();
+
 
         return view('home', ['allPosts' => $allPosts]);
     }
