@@ -21,9 +21,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/home', 'HomeController@handleSubmits');
+Route::post('/home', 'HomeController@handleSubmit');
 Route::get('/profile/{id}', 'ProfileController@index')->name('profile');
-Route::post('/profile/{id}', 'ProfileController@handleSubmits');
+Route::post('/profile/{id}', 'ProfileController@handleSubmit');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-Route::post('/dashboard/{id}', 'DashboardController@addFriend');
-
+Route::post('/dashboard', 'DashboardController@handleSubmit');

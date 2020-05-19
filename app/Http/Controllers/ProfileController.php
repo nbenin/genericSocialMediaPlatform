@@ -30,7 +30,7 @@ class ProfileController extends Controller
         return view('profile', ['user' => $user]);
     }
 
-    public function handleSubmits(Request $request, $id)
+    public function handleSubmit(Request $request, $id)
     {
         if ($request->has('postForm')) {
             $postController = new PostController();

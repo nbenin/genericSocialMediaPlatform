@@ -15,7 +15,10 @@
             <tr>
                 <td>{{ $friend->name }}</td>
                 <td>{{ $friend->email }}</td>
-                <td><a href="#">Remove friend</a></td>
+                <td><form method="post" action="{{ URL::to('/dashboard') }}">
+                        {{ csrf_field() }}
+                        <button type="submit" name="removeFriend" value="{{ $friend->id }}">Remove Friend</button>
+                    </form></td>
             </tr>
         @endforeach
         </tbody>
@@ -34,7 +37,12 @@
             <tr>
                 <td>{{ $friend->name }}</td>
                 <td>{{ $friend->email }}</td>
-                <td>{{ action('DashboardController@addFriend', ['id' => $friend->id]) }}</td>
+                <td>
+                    <form method="post" action="{{ URL::to('/dashboard') }}">
+                        {{ csrf_field() }}
+                        <button type="submit" name="addFriend" value="{{ $friend->id }}">Add Friend</button>
+                    </form>
+                </td>
             </tr>
         @endforeach
         </tbody>

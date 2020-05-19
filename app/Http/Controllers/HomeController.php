@@ -36,17 +36,15 @@ class HomeController extends Controller
         return view('home', ['allPosts' => $allPosts]);
     }
 
-    public function handleSubmits(Request $request)
+    public function handleSubmit(Request $request)
     {
         if ($request->has('postForm')) {
             $postController = new PostController();
             $postController->store($request);
-
         }
         if ($request->has('commentForm')) {
             $commentController = new CommentController();
             $commentController->store($request);
-
         }
         return $this->index();
     }

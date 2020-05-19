@@ -11,22 +11,28 @@ class DashboardController extends Controller
     // shows friends and available friends
     public function index()
     {
-        $otherUsers = User::with('friends')->where('id','!=', Auth::id())->get();
-        $friends = Auth::user()->friends();
-        $notFriends = $otherUsers;
+        $notFriends = User::with('friends')->where('id','!=', Auth::id())->get();
 
         return view('dashboard', ['notFriends' => $notFriends]);
     }
 
-    public function addFriend($id)
+    // for friend requests and removal
+    public function handleSubmit(Request $request)
     {
-        $user = User::where('id', $id);
-        echo $user;
-        return view('dashboard');
-    }
+        $controller = new FriendController();
 
-    public function removeFriend($id)
-    {
-        return view('dashboard');
+        if ($request->has('addFriend'))
+        {
+            $friendId = $request->addFriend;
+            $controller->addFriend($friendId);
+        }
+        if ($request->has('removeFriend'))
+        {
+            $friendId = $request->removeFriend;
+            $controller->removeFriend($friendId);
+        }
+
+        $notFriends = User::with('friends')->where('id','!=', Auth::id())->get();
+        return view('dashboard', ['notFriends' => $notFriends]);
     }
 }
