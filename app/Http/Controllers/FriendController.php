@@ -9,13 +9,13 @@ use Illuminate\Support\Facades\Auth;
 class FriendController extends Controller
 {
     //
-    public function addFriend($friendId)
+    public function addFriend(Request $request)
     {
-        Auth::user()->friends()->attach([$friendId]);
+        Auth::user()->friends()->attach([$request->addFriend]);
     }
 
-    public function removeFriend($friendId)
+    public function removeFriend(Request $request)
     {
-        Auth::user()->friends()->detach([$friendId]);
+        Auth::user()->friends()->detach([$request->removeFriend]);
     }
 }
