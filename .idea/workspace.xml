@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3704cab3-93b9-45fe-932a-5e53e7d72962" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +200,10 @@
       <workItem from="1589526136474" duration="9449000" />
       <workItem from="1589543991890" duration="6208000" />
       <workItem from="1589786164162" duration="12791000" />
-      <workItem from="1589872577531" duration="15198000" />
+      <workItem from="1589872577531" duration="15468000" />
+      <workItem from="1589965110622" duration="622000" />
+      <workItem from="1589967848050" duration="257000" />
+      <workItem from="1589980877089" duration="282000" />
     </task>
     <servers />
   </component>
@@ -281,10 +283,10 @@
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
     <state x="482" y="187" key="SettingsEditor/67.27.1853.1053/1920.0.1280.1024@67.27.1853.1053" timestamp="1589199933607" />
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1589872578732">
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1589980877446">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
-    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053/1920.0.1280.1024@67.27.1853.1053" timestamp="1589872578732" />
+    <state x="649" y="380" key="com.intellij.ide.util.TipDialog/67.27.1853.1053/1920.0.1280.1024@67.27.1853.1053" timestamp="1589980877446" />
     <state x="639" y="283" width="709" height="538" key="find.popup" timestamp="1589787548370">
       <screen x="67" y="27" width="1853" height="1053" />
     </state>
