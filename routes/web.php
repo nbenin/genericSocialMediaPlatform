@@ -26,4 +26,4 @@ Route::get('/profile/{id}', 'ProfileController@index')->name('profile');
 Route::post('/profile/{id}', 'ProfileController@handleSubmit');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 Route::post('/dashboard', 'DashboardController@handleSubmit');
-Route::post('/removefriend', 'AjaxController@removeFriend');
+Route::post('/removefriend', 'AjaxController@removeFriend')->name('removefriend');
