@@ -82,30 +82,4 @@
         </main>
     </div>
 </body>
-<script type="text/javascript">
-$(document).on('click', '.removeFriend', function(event) {
-    event.preventDefault();
-    let id = $(this).val();
-    removeFriend(id);
-});
-
-var removeFriend = function (id){
-    $.ajax({
-        type:'POST',
-        url:'{{ route('removefriend') }}',
-        dataType:'json',
-        data: {
-            "_token": "{{ csrf_token() }}",
-            "id": id
-        },
-        success: function(data) {
-            location.refresh();
-            console.log(data);
-        },
-        error: function(data) {
-            console.log(data);
-        }
-    });
-}
-</script>
 </html>
