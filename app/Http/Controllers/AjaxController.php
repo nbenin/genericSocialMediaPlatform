@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AjaxController extends Controller
 {
     //
-    function removeFriend()
+    function removeFriend(Request $request)
     {
-        echo "i'm here at elast";
-        $msg = "This is a simple message.";
+        $msg = $request->id;
+        Auth::user()->friends()->detach([$msg]);
         return response()->json(array('msg'=> $msg), 200);
     }
 }

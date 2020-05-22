@@ -83,30 +83,29 @@
     </div>
 </body>
 <script type="text/javascript">
-/*    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });*/
 $(document).on('click', '.removeFriend', function(event) {
     event.preventDefault();
-    removeFriend();
+    let id = $(this).val();
+    removeFriend(id);
 });
-var removeFriend = function (){
-    console.log('hi');
+
+var removeFriend = function (id){
     $.ajax({
         type:'POST',
         url:'{{ route('removefriend') }}',
         dataType:'json',
-        data: {"_token": "{{ csrf_token() }}"},
+        data: {
+            "_token": "{{ csrf_token() }}",
+            "id": id
+        },
         success: function(data) {
+            location.refresh();
             console.log(data);
         },
         error: function(data) {
             console.log(data);
         }
     });
-    console.log('hay');
 }
 </script>
 </html>
