@@ -15,11 +15,10 @@
             <tr id="friendWith{{ $friend->id }}">
                 <td>{{ $friend->name }}</td>
                 <td>{{ $friend->email }}</td>
-                <td>{{--<form method="post" action="{{ URL::to('/dashboard') }}">
+                <td><form method="post" action="{{ URL::to('/dashboard') }}">
                         {{ csrf_field() }}
                         <button type="submit" name="removeFriend" onclick="removeFriend()" value="{{ $friend->id }}">Remove Friend</button>
-                    </form>--}}
-                    <input type="button" id="removeFriend{{ $friend->id }}" value="{{ $friend->id }}" class="removeFriend">
+                    </form>
                 </td>
             </tr>
         @endforeach

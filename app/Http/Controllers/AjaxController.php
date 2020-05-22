@@ -10,8 +10,8 @@ class AjaxController extends Controller
     //
     function removeFriend(Request $request)
     {
-        $msg = $request->id;
-        Auth::user()->friends()->detach([$msg]);
-        return response()->json(array('msg'=> $msg), 200);
+        $friendId = $request->id;
+        Auth::user()->friends()->detach([$friendId]);
+        return response()->json(array('friendId'=> $friendId), 200);
     }
 }
